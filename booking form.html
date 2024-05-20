@@ -1,0 +1,219 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="logo icon" type="logo" href="img/new logo.png">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/draft.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+    <title>Siquitour</title>
+  </head>
+  <body>
+    
+  <div class="sticky">
+    <div class="navbar">
+      <div class="company-name">  <a href="home.html"><img id="logo" src="img/logo1.png"></a></div>
+      <div class="links">
+      <a href="destinations.html">DESTINATIONS</a>
+      <a href="transportation.html">TRANSPORTATION</a>
+      <a href="food.html">FOOD</a>
+      <a href="accommodation.html">ACCOMMODATION</a>
+      <a id="clicked" href="booking form.html">RESERVE A ROOM</a>
+      </div>
+      
+      
+  </div>
+  <div class="border"></div>
+  </div>
+
+  <!-- Left container for additional content -->
+    <div class="left-container">
+        <section class="container2">
+
+        </section>
+    <!-- Add your content here -->
+    </div>
+
+  <div class="right-container">
+  <section class="container">
+    <header id="title">Booking Form</header>
+    <p class="desc1">Search for a room that fits your needs and proceed to booking!</p>
+    <form action="#" class="form">
+        <div class="input-box program">
+            <label>Room Type:</label>
+            <div class="select-box">
+                <select id="select1" required>
+                    <option hidden>Select</option>
+                    <option value="Single Room">Single Room</option>
+                    <option value="Twin Room">Twin Room</option>
+                    <option value="Beachside Room">Beachside Room</option>
+                    <option value="Deluxe Room">Deluxe Room</option>
+                    <option value="Villa">Villa</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-box date-container">
+            <div class="date-box1">
+                <label for="check-in-date">Check-in Date:</label>
+                <input type="date" id="check-in-date" placeholder="mm/dd/yy" required/>
+            </div>
+            <div class="date-box2">
+                <label for="check-out-date">Check-out Date:</label>
+                <input type="date" id="check-out-date" placeholder="mm/dd/yy" required/>
+            </div>
+        </div>
+
+        <div class="input-box date-container">
+            <div class="guest-box1">
+                <label for="num-adults">No. of Adults (18+)</label>
+                <input type="number" id="check-adults" required/>
+            </div>
+            <div class="guest-box2">
+                <label for="num-child">No. of Children (18-)</label>
+                <input type="number" id="check-childs" required/>
+            </div>
+        </div>
+
+        <div class="choice-box">
+            <h3>Amenities (Check all that apply):</h3>
+            <div class="choice-options">
+                <div class="choice">
+                    <input type="checkbox" value="pwd" id="check-pwd"/>
+                    <label for="check-pwd">PWD Friendly</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="kitchen" id="check-kitchen"/>
+                    <label for="check-kitchen">Kitchen</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="beauty-apps" id="check-beautapps"/>
+                    <label for="check-beautapps">Beauty Applications</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="aircon" id="check-aircon"/>
+                    <label for="check-aircon">Aircon</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="pool" id="check-pool"/>
+                    <label for="check-pool">Resort Pool</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="balcony" id="check-balcony"/>
+                    <label for="check-balcony">Balcony</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="laundry" id="check-laundry"/>
+                    <label for="check-laundry">Laundry Services</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="security" id="check-security"/>
+                    <label for="check-security">24/7 Security</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" value="restaurant" id="check-resto"/>
+                    <label for="check-resto">Restaurant</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="column center-align">
+            <input class="buttons search-button" type="button" value="Search for Rooms"/>
+        </div>
+
+        <div class="column">
+            <div class="input-box">
+                <label>Full Name:</label>
+                <input type="text" id="first-name" placeholder="Full Name" required/>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="input-box">
+                <label>Phone Number:</label>
+                <input type="text" id="phone-number" placeholder="+63" required/>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>Email:</label>
+            <input type="email" id="email-add" placeholder="Enter email address" required/>
+        </div>
+
+        <div class="column center-align">
+            <div class="reserve-container">
+                <button class="reserve-button">Reserve Room</button>
+                <div class="total-button">
+                    <p class="total">Total</p>
+                    <p class="price">1,500PHP</p>
+                </div>
+                <p class="disclaimer">*Payment will be required once your reservation is approved.</p>
+            </div>
+        </div>
+
+        <div class="column button-row">
+            <input class="buttons small-button" type="button" value="Reset Form"/>
+            <input class="buttons small-button" type="button" value="Exit Form"/>
+        </div>
+    </form>
+</section>
+</div>
+
+
+
+
+    <footer class="footer1">
+      <div class="footer-distributed">
+    
+        <div class="newsletter-column">
+          <div class="newsletter-container">
+            <h4>Join Our Newsletter To Receive <br>Updates on Siquijor!</h4>
+            <form class="newsletter-form">
+            <input type="email" placeholder="Your e-mail" class="rounded-input">
+            <button type="submit" class="rounded-button">SUBSCRIBE</button>
+            </form>
+          </div>
+          <p class="footer-company-name">© 2023 SiquiTour. All Rights Reserved</p>
+          </div>
+    
+    
+        <div class="footer-left">
+          <div class="company-name">  <a href="home.html"><img id="logo" src="img/logo1.png"></a></div>
+          <p class="footer-links">
+          <a href="home.html" class="link-1">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="emergency.html">Emergency Hotlines</a>
+          </p>
+        </div>
+      
+        
+        <div class="footer-center">
+          <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>UP Mindanao</span>Mintal, Davao City</p>
+          </div>
+          <div>
+          <i class="fa fa-phone"></i>
+          <p>+63 908 296 2945</p>
+          </div>
+          <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">siquiitour@gmail.com</a></p>
+          </div>
+        </div>
+        
+        <div class="footer-right">
+          <p class="footer-company-about">
+          <span>About the company</span>
+          Siquitour is your gateway to the enchanting beauty of Siquijor. As a dedicated platform, we strive to showcase the island's unique attractions, cultural richness, and hidden gems. Whether you're a seasoned traveler or a first-time visitor, Siquitour is here to guide you on an unforgettable journey.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
+  
