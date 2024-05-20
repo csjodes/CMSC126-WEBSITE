@@ -1,0 +1,468 @@
+    header{
+        max-width: 100%;
+        max-height:800px;
+        margin-bottom:120px;
+    }
+    
+    #clicked{
+        background-color: #74775a;
+        color: #f4eeed;
+      }
+
+ .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navigation bar appears above other elements */
+  }
+      .navbar {
+        background-color: #f4eeed;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0 40px; /* Adjust padding as needed */
+      }
+  
+      .company-name {
+        flex:1;
+        color: #74775a;
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      .links{
+        flex:1;
+		display: inline-flex;
+        
+  }
+  a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+      .navbar a {
+      
+        color: #74775a;
+        text-decoration: none;
+        padding: 32px 10px 25px 10px ;
+        font-size: 13px;
+        transition: background-color 0.3s, color 0.3s;
+        font-weight: bold;
+      }
+  
+      .links a:hover {
+        background-color: #74775a;
+        color: #f4eeed;
+      }
+  
+      .border {
+        height: 1px;
+        width:100%;
+        margin: 0 auto;
+       display: block;
+        background-color: #999b84;
+       top:1;
+      }
+  
+      .content {
+        padding: 50px 20px 20px;
+        max-height: 100%;
+        margin-bottom:150px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: #696969;
+      }
+  
+      .content2 {
+        padding: 0 20px 20px;
+        height: 700px;
+        margin-bottom:300px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: #696969;
+      }
+  
+
+  
+  footer {
+    margin-top: 10px;
+  }
+  
+  * {
+    margin:0;
+    padding:0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  #logo {
+    width: 250px;
+    height: 70px;
+  }
+  
+  /* Footer css */
+
+.footer1{
+    position: absolute;
+    margin-top: 1400px;
+    width: 100%;
+    background-color: #74775A;
+    color: white;
+    text-align: center;
+    
+}
+.footer-distributed{
+	background: #999B84;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	font-family: 'Nokora', sans-serif;
+	padding: 45px 40px;
+    margin:auto;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right, 
+.footer-distributed .newsletter-column{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 23%;
+	border-left: 2px solid #ccc;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Nokora', cursive;
+	margin: 0;
+}
+
+#logo {
+	margin-left: 58px;
+	width: 180px;
+	height: 37px;
+  }
+
+.footer-distributed h3 span{
+	color:  #FBD8C8;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 10px 0 12px 60px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:block;
+	line-height: 1.8;
+    font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+    transition: color .4s ease;
+	margin-bottom: 5px;
+}
+.footer-links a:hover{
+  color: #FBD8C8;
+}
+
+.footer-company-name{
+	color:  #d3d3d3;
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: 15px;
+	margin-left: 47px;
+}
+
+/* Footer Newsletter */
+.newsletter-container {
+	text-align: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 20px;
+	color: #fff;
+  }
+  
+  .newsletter-form {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+  }
+  
+  .rounded-input {
+	border: 2px solid #FBD8C8;
+	border-radius: 20px;
+	padding: 10px;
+    margin-top: 15px;
+	margin-bottom: 6px;
+	width: 283px;
+	background-color: #999B84;
+  }
+  
+  .rounded-input:focus {
+	border-color: #FBD8C8;
+	outline: none;
+  }
+  
+  .rounded-input:not(:placeholder-shown) {
+	color: #FBD8C8;
+  }
+  
+  .rounded-input::placeholder {
+	color: #FBD8C8;
+  }
+  
+  .rounded-button {
+	border: 2px solid #FBD8C8;
+	background-color: #FBD8C8;
+	color: #999B84;
+	border-radius: 20px;
+	padding: 10px;
+	cursor: pointer;
+	width: 283px;
+	font-weight: bold;
+	font-size: 15px;
+	letter-spacing: 1px;
+	transition: 0.3s ease;
+  }
+  
+  .rounded-button:hover {
+	background-color: #f5cbb8;
+  }
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 23%;
+	margin-top: 27px;
+}
+
+.footer-distributed .footer-center i{
+	background-color:   #fff;
+	color: #999B84;
+	font-size: 18px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 18px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:12px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #fff;
+	text-decoration: none;
+  transition: color .4s ease;
+}
+
+.footer-center p a:hover{
+  color: #FBD8C8;
+}
+
+.footer-distributed .footer-links a:before {
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+  margin-top: 8px;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #fff;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #fff;
+	border-radius: 10px;
+
+	font-size: 20px;
+	color: #999B84;
+	text-align: center;
+	line-height: 35px;
+    transition: color .4s ease;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.footer-icons a:hover{
+  color: #FBD8C8;
+}
+
+
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+  
+  .pname{
+    margin-top: 7px;
+    margin-bottom:10px;
+    font-size:40px;
+    color:#74775a;
+  }
+  
+  .plabel{
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size:25px;
+    color:#74775a;
+  }
+  
+  .destination{
+    text-align: right;
+    width:100%;
+  }
+  
+  .container11 {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align:left;
+  }
+  
+  .column-left1 {
+    flex: 2;
+  
+  }
+  
+  .column-right1 {
+    flex: 1.5;
+    padding: 0 20px;
+  }
+  
+  .price-fix {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  #price{
+  
+    padding-left:5px;
+  
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin-bottom:10px;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  table, th, td {
+    border-right: none;
+    border-left:none;
+  }
+  
+  .dscrpt{
+  
+    font-size:20px;
+    margin-bottom:30px;
+  }
+  
+  figcaption {
+    font-style: italic;
+    color: #828282;
+    text-align: left;
+
+}
