@@ -33,7 +33,7 @@ body {
 }
 
 .container2 {
-    width: 900px;
+    width: 950px;
     height: 1100px;
     border: 2px solid #74775A;
     padding: 25px;
@@ -354,7 +354,7 @@ select option {
 }
 
 .card-img {
-    height: 260px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -409,3 +409,17 @@ select option {
     background-color: #c9302c;
 }
 
+.book-button {
+    background-color: #74775A;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: right;
+    margin-left: 330px;
+}
+
+.book-button:hover {
+    background-color: #74775a;
+}
