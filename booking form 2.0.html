@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo icon" type="logo" href="img/new logo.png">
+  <link rel="stylesheet" href="css/booking.css">
+  <link rel="stylesheet" href="css/draft.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Siquitour</title>
+</head>
+<body>
+
+<div class="sticky">
+  <div class="navbar">
+    <div class="company-name"><a href="booking form 2.0.html"><img id="logo" src="img/logo1.png"></a></div>
+  </div>
+  <div class="border"></div>
+</div>
+
+<div class="main-container">
+  <section class="container2">
+
+    <header id="title">White Villas Resort</header>
+    <p class="desc1">Search for a room that fits your needs!</p>
+
+    <form action="#" class="form">
+        <div class="column center-align">
+        <div class="input-box program">
+          <div class="select-box">
+            <select id="select1" required>
+              <option hidden>Room Type</option>
+              <option value="Single Room">Single Room</option>
+              <option value="Twin Room">Twin Room</option>
+              <option value="Beachside Room">Beachside Room</option>
+              <option value="Deluxe Room">Deluxe Room</option>
+              <option value="Villa">Villa</option>
+            </select>
+          </div>
+        </div>
+        </div>
+        <div class="column center-align">
+          <input class="buttons search-button" type="button" value="Search for Rooms" onclick="validateForm()"/>
+        </div>
+      </form>
+
+      <div class="border"></div>
+
+    <div class="left-tabs">
+      <input type="radio" class="tabs_radio" name="tabs-example" id="tab1" checked>
+      <label for="tab1" class="tabs_label">Room choices</label>
+      <div class="tabs_content">
+        <div class="card">
+          <img src="img/single.webp" alt="Room 1" class="card-img">
+          <div class="card-text">
+            <h3 class="pname">Standard Room</h3>
+            <h3 class="pname">₱ 6500 per night</h3>
+            <div class="column-right1">
+              <table>
+                <tr>
+                  <td>Amenities</td>
+                  <td>Standard Room with King bed, Wi-fi sea & mountain view aircon, ceiling fan, tv, mini fridge, hot & cold shower. Good for 2 PAX</td>
+                </tr>
+              </table>  
+              <table>
+                <tr>
+                  <td>Good for</td>
+                  <td>2 PAX</td>
+                </tr>
+              </table>   
+              <button class="book-button">Select Room</button>       
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/twin.webp" alt="Room 1" class="card-img">
+          <div class="card-text">
+            <h3 class="pname">Twin Beds Room</h3>
+            <h3 class="pname">₱ 6500 per night</h3>
+            <div class="column-right1">
+              <table>
+                <tr>
+                  <td>Amenities</td>
+                  <td>Standard room with two single beds. Wi-fi, sea & mountain view, aircon, ceiling fan, TV, mini fridge, hot & cold shower.</td>
+                </tr>
+              </table>   
+              <table>
+                <tr>
+                  <td>Good for</td>
+                  <td>2 PAX</td>
+                </tr>
+              </table>   
+              <button class="book-button">Select Room</button>           
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/family.webp" alt="Room 1" class="card-img">
+          <div class="card-text">
+            <h3 class="pname">Family Room</h3>
+            <h3 class="pname">₱ 9000 per night</h3>
+            <div class="column-right1">
+              <table>
+                <tr>
+                  <td>Amenities</td>
+                  <td>2 bedrooms, kitchen, big refrigerator, dining area, terrace, hot & cold shower, aircon, ceiling fan, private internet, TV, free drinking water.</td>
+                </tr>
+              </table>  
+              <table>
+                <tr>
+                  <td>Good for</td>
+                  <td>2 adults & 3 children (under 9 years old or 4 adults)</td>
+                </tr>
+              </table>     
+              <button class="book-button">Select Room</button>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="booking form.js"></script>
+
+</body>
+</html>
