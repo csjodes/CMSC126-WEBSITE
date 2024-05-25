@@ -1,0 +1,54 @@
+body {
+  display: flex; /* Use flexbox layout for the body */
+  flex-direction: column; /* Stack the header and dashboard-container vertically */
+  min-height: 100vh; /* Ensure the body fills the viewport height */
+}
+
+.container {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Arrange children with space between them */
+  align-items: flex-start; /* Align items at the start of the cross axis */
+  padding: 20px; /* Add padding around the container */
+}
+
+.dashboard-container {
+  position: absolute;
+  top: 120px;
+  left: 323px;
+  width: 1050px;
+  border-radius: 10px;
+  border: 2px solid #967270;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dashboard-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dashboard-container th{
+  background-color: #737B4C;
+  color:#dddddd;
+}
+.dashboard-container th,
+.dashboard-container td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 17px;
+  
+}
+
+td{
+  color: #333;
+}
+thead tr{
+  background-color: #737B4C;
+  color:#dddddd;
+}
+
+h2{
+  color:#555f2a;
+  text-align: center;
+  padding: 20px;
+  }

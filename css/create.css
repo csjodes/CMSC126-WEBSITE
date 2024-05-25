@@ -1,0 +1,127 @@
+body {
+    font-family: 'NTR', sans-serif;
+    background-color: #f4eeed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'NTR', sans-serif;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    position: absolute;
+    top: 130px;
+    left: 805px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: 2px solid #737B4C;
+    color: #737B4C;
+    border-radius: 10px;
+}
+
+.create-container {
+    position: absolute;
+    top: 230px;
+    left: 423px;
+    width: 800px;
+    background-color: #967270;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.create-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-container label {
+    margin: 10px 0 3px;
+}
+
+.create-container input, .create-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: 'NTR', sans-serif;
+    height: 45px;
+}
+.create-container button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #737B4C;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.create-container button:hover {
+    background-color: #283100;
+}
+
+.choice-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .choice {
+    margin-bottom: -15px;
+    margin-right: -70px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .choice input[type="checkbox"] {
+    margin-right: 10px; /* Adjust the space between the checkbox and the label */
+    transform: scale(1.5); /* Increase the size of the checkbox */
+  }
+  
+  .choice label {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center; /* Align text vertically center */
+    margin-top: -4px;
+  }
+
+  
+.choice-box {
+    margin-top: 10px;
+  }
+  
+  /* Adjust width as needed */
+  .choice {
+    width: calc(33.33% - 20px); /* Adjust margin to accommodate 3 items per row */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .choice {
+      width: calc(50% - 20px); /* Adjust margin to accommodate 2 items per row on smaller screens */
+    }
+  }
+
+.rule {
+    color: #c7c5c5;
+    margin-bottom: 10px;
+}
+
+input::placeholder,
+select option {
+    font-family: 'NTR';
+    font-size: 16px;
+    color: #707070;
+}
