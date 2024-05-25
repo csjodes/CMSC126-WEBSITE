@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    font-family: 'NTR', sans-serif;
+    color: #fff;
+    background-color: #f4eeed;
+    font-size: 16px;
+    line-height: 1.0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 370px;
+}
+
+
+.container {
+    max-width: 380px;
+    width: 100%;
+    background: #74775A;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    margin-right: 10px;
+}
+
+.container2 {
+    width: 1100px;
+    height: 1250px;
+    border: 2px solid #74775A;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.left-container {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+}
+
+
+  
+header {
+    font-size: 40px;
+    color: #74775A;
+    font-weight: 750;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.desc1 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #74775A;
+}
+
+.form {
+    margin-top: 10px;
+}
+
+input::placeholder,
+select option {
+    font-family: 'NTR';
+    font-size: 16px;
+    color: #707070;
+}
+
+.input-box {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    color: #74775A;
+    font-size: 20px;
+}
+
+.input-box input,
+.select-box select {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    font-family: 'NTR';
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-box {
+    position: relative;
+}
+
+.select-box::after {
+    content: '\25BC';
+    position: absolute;
+    top: 63%;
+    right: 20px; /* Adjust this value to move the arrow left */
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #707070;
+}
+
+.buttons {
+    height: 35px;
+    width: 100%;
+    color: #F4EEED;
+    background-color: #74775A;
+    font-size: 17px;
+    font-family: 'NTR';
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.buttons:hover {
+    background-color: #54573f;
+}
+
+.search-button {
+    width: 160px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.total-button {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 170px;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #F4EEED;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 12px;
+}
+
+.center-align {
+    display: flex;
+    justify-content: center;
+}
+
+
+.left-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .tabs_label {
+    padding: 10px 16px;
+    cursor: pointer;
+    color: #74775A;
+  }
+  
+  .tabs_radio {
+    display: none;
+  }
+  
+  .tabs_content {
+    color: #74775A;
+    margin-top:10px;
+    order: 1;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 0.9em;
+    display: none;
+  }
+  
+  .tabs_radio:checked + .tabs_label {
+    font-weight: bold;
+    border-bottom: 2px solid #74775A;
+  }
+  
+  .tabs_radio:checked + .tabs_label + .tabs_content {
+    display: initial;
+  }
+  
+
+/* Styles for the cards */
+.card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #74775A;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    color: #74775A;
+    font-size: 16px;
+    position: relative; /* Position for absolute positioning of the delete button */
+}
+
+.card-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 5px 0px 0 15px;
+    
+}
+
+.card-text p {
+    margin: 5px 0; /* Adjust margin for consistency */
+    color: #74775A;
+}
+
+.card-action {
+    position: absolute; /* Position relative to the card */
+    bottom: 0; /* Align to the bottom of the card */
+    right: 0; /* Align to the right of the card */
+    padding: 10px 15px;
+}
+
+.pname{
+    font-size:25px;
+    color:#74775a;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  table, th, td {
+    border-right: none;
+    border-left:none;
+  }
+
+.delete-button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
+.book-button {
+    background-color: #74775A;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: right;
+    margin-left: 330px;
+}
+
+.book-button:hover {
+    background-color: #b0b67a;
+}
