@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo icon" type="logo" href="img/new logo.png">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/create.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Edit Room</title>
+</head>
+<body>
+  <header>
+    <img id="logo" src="img/logo1.png" alt="Company Logo">
+    <div class="border"></header>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a class="logo">
+          <img src="img/new logo.png" alt="">
+          <span class="nav-item">VillaStar</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard.html">
+          <i class="fas fa-chart-bar"></i>
+          <span class="nav-item">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="create.html" id="selected">
+          <i class="fas fa-plus"></i>
+          <span class="nav-item">Add Room</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="create-container">
+    <h1>Edit Room</h1>
+    <form id="create-room-form" action="edit.php" method="POST" enctype="multipart/form-data">
+      <input type="hidden" id="room_id" name="room_id">
+
+      <label for="roomType">Room Type:</label>
+      <select id="roomType" name="roomType" required>
+        <option hidden>Room Type</option>
+        <option value="Single Room">Single Room</option>
+        <option value="Twin Room">Twin Room</option>
+        <option value="Beachside Room">Beachside Room</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Villa">Villa</option>
+      </select>
+
+      <label for="roomCapacity">Room Capacity:</label>
+      <input type="number" id="roomCapacity" name="roomCapacity" required>
+
+      <label for="roomAvailable">Room Available:</label>
+      <select id="roomAvailable" name="roomAvailable" required>
+        <option hidden>Availability</option>
+        <option value="AVAILABLE">Available</option>
+        <option value="RESERVED">Reserved</option>
+      </select>
+
+      <div class="choice-box">
+        <label for="roomAmenities">Amenities (Check all that apply):</label>
+        <div class="choice-options">
+          <div class="choice">
+            <input type="checkbox" value="Aircon" name="roomAmenities[]">
+            <label>Aircon</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Single Bed" name="roomAmenities[]">
+            <label>Single Bed</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Twin Bed" name="roomAmenities[]">
+            <label>Twin Bed</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Double Bed" name="roomAmenities[]">
+            <label>Double Bed</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="King Bed" name="roomAmenities[]">
+            <label>King Bed</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Wi-fi" name="roomAmenities[]">
+            <label>Wi-Fi</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Television" name="roomAmenities[]">
+            <label>Television</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Room Service" name="roomAmenities[]">
+            <label>Room Service</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Laundry Services" name="roomAmenities[]">
+            <label>Laundry Services</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Hairdryer" name="roomAmenities[]">
+            <label>Hairdryer</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Kitchen" name="roomAmenities[]">
+            <label>Kitchen</label>
+          </div>
+          <div class="choice">
+            <input type="checkbox" value="Minibar" name="roomAmenities[]">
+            <label>Minibar</label>
+          </div>
+        </div>
+      </div>
+
+      <label for="roomRate">Room Rate:</label>
+      <input type="number" step="0.01" id="roomRate" name="roomRate" required>
+
+      <label for="roomImage">Upload room image: (Optional)</label>
+      <input id="roomImage" name="roomImage" type="file">
+
+      <button type="submit" name="edit-btn" id="edit-room-btn">Update Room</button>
+    </form>
+  </div>
+
+  <script>
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const roomId = urlParams.get('room_id');
+
+      fetch(`get_room.php?room_id=${roomId}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('room_id').value = data.room_id;
+          document.getElementById('roomType').value = data.room_Type;
+          document.getElementById('roomCapacity').value = data.room_Capacity;
+          document.getElementById('roomAvailable').value = data.room_Available;
+
+          const amenities = data.room_Amenities.split(',');
+          amenities.forEach(amenity => {
+            const checkbox = document.querySelector(`input[name="roomAmenities[]"][value="${amenity.trim()}"]`);
+            if (checkbox) {
+              checkbox.checked = true;
+            }
+          });
+
+          document.getElementById('roomRate').value = data.room_Rate;
+        })
+        .catch(error => console.error('Error fetching room data:', error));
+    };
+  </script>
+</body>
+</html>

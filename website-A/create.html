@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo icon" type="logo" href="img/new logo.png">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/create.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Create Room</title>
+</head>
+<body>
+  <div class="header">
+    <img id="logo" src="img/logo1.png" alt="Company Logo">
+    <div class="border"></div>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a class="logo">
+          <img src="img/new logo.png" alt="">
+          <span class="nav-item">VillaStar</span>
+        </a>
+      </li>
+      <li>
+        <a href="dashboard.html">
+          <i class="fas fa-chart-bar"></i>
+          <span class="nav-item">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="create.html" id="selected">
+          <i class="fas fa-plus"></i>
+          <span class="nav-item">Create</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    
+  <h2>CREATE ROOM</h2>
+
+  <div class="create-container">
+    <form id="create-room-form" action="create.php" method="POST" enctype="multipart/form-data">
+      <label for="room_id">Room ID:</label>
+      <input type="number" id="room_id" name="room_id" required>
+
+      <label for="roomType">Room Type:</label>
+      <select id="roomType" name="roomType" required>
+        <option hidden>Room Type</option>
+        <option value="Single Room">Single Room</option>
+        <option value="Twin Room">Twin Room</option>
+        <option value="Beachside Room">Beachside Room</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Villa">Villa</option>
+      </select>
+
+      <label for="roomCapacity">Room Capacity:</label>
+      <input type="number" id="roomCapacity" name="roomCapacity" required>
+
+      <label for="roomAvailable">Room Available:</label>
+      <select id="roomAvailable" name="roomAvailable" required>
+        <option hidden>Availability</option>
+        <option value="AVAILABLE">Available</option>
+        <option value="RESERVED">Reserved</option>
+      </select>
+
+      <div class="choice-box">
+        <label for="roomAmenities">Amenities (Check all that apply):</label>
+        <div class="choice-options" mb-3>
+            <div class="choice">
+                <input type="checkbox" value="Aircon" name="roomAmenities[]"/>
+                <label for="check-choices">Aircon</label>
+            </div>
+            <div class="choice" mb-3>
+              <input type="checkbox" value="Ceiling Fan" name="roomAmenities[]"/>
+              <label for="check-choices">Ceiling Fan</label>
+            </div>
+            <div class="choice" mb-3>
+              <input type="checkbox" value="Wi-fi" name="roomAmenities[]"/>
+              <label for="check-choices">Wi-Fi</label>
+            </div>
+            <div class="choice" mb-3>
+              <input type="checkbox" value="Television" name="roomAmenities[]"/>
+              <label for="check-choices">Television</label>
+            </div>
+            <div class="choice" mb-3>
+                <input type="checkbox" value="Single Bed" name="roomAmenities[]"/>
+                <label for="check-choices">Single Bed</label>
+            </div>
+            <div class="choice" mb-3>
+                <input type="checkbox" value="Twin Bed" name="roomAmenities[]"/>
+                <label for="check-choices">Twin Bed</label>
+            </div>
+            <div class="choice" mb-3>
+                <input type="checkbox" value="Double Bed" name="roomAmenities[]"/>
+                <label for="check-choices">Double Bed</label>
+            </div>
+            <div class="choice" mb-3>
+                <input type="checkbox" value="King Bed" name="roomAmenities[]"/>
+                <label for="check-choices">King Bed</label>
+            </div>
+            <div class="choice" mb-3>
+              <input type="checkbox" value="Room Service" name="roomAmenities[]"/>
+              <label for="check-choices">Room Service</label>
+            </div>
+            <div class="choice" mb-3>
+              <input type="checkbox" value="Laundry Services" name="roomAmenities[]"/>
+              <label for="check-choices">Laundry Services</label>
+            </div>
+            <div class="choice" mb-3>
+                <input type="checkbox" value="Hairdryer" name="roomAmenities[]"/>
+                <label for="check-choices">Hairdryer</label>
+            </div>
+            <div class="choice" mb-3>
+                <input type="checkbox" value="Kitchen" name="roomAmenities[]"/>
+                <label for="check-choices">Kitchen</label>
+            </div>
+        </div>
+    </div>
+    <br>
+      <label for="roomRate">Room Rate:</label>
+      <input type="number" step="0.01" id="roomRate" name="roomRate" required>
+
+      <label for="roomImage">Upload room image:</label>
+      <div class="room-image">
+      <input id="roomImage" name="roomImage" type="file" value="" required/>
+      </div>
+
+      <button type="submit" name="add-btn" id="add-room-btn">ADD ROOM</button>
+    </form>
+  </div>
+
+  <script src="create.js"></script>
+</body>
+</html>
