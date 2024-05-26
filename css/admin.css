@@ -28,7 +28,7 @@ nav{
   position: relative;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  height: 145vh;
   left: 0;
   background: #fff;
   width: 280px;
@@ -36,6 +36,7 @@ nav{
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
   background-color: #737B4C;
   color:#eee;
+  margin-right:auto;
 }
 .logo{
   text-align: center;
@@ -208,22 +209,16 @@ a.logo:hover{
 .js{
   color: rgb(28, 98, 179);
 }
-  </span>
 
 
-.header {
-    display: flex;
-    justify-content: center; /* Align content horizontally to the center */
-    align-items: center; /* Align content vertically to the center */
-    padding: 20px 0; /* Add padding as needed */
-  }
+
 
   #logo {
     width: 180px;
     height: auto;
     margin: auto;
     display: block;
-    padding: 20px;
+    padding: 10px;
   }
 
 .border {
