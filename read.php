@@ -17,6 +17,7 @@ $room_type = isset($_GET['room_type']) ? $conn->real_escape_string($_GET['room_t
 
 // Prepare SQL query with room availability filter
 $sql = "SELECT * FROM rooms WHERE room_Available = 'AVAILABLE'";
+
 if (!empty($room_type)) {
     $sql .= " AND room_Type LIKE '%$room_type%'";
 }
